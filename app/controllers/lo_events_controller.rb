@@ -3,6 +3,9 @@ class LoEventsController < ApplicationController
   swagger_controller :lo_events, "List of events"
 
   # GET /lo_events or /lo_events.json
+  swagger_api :index do
+    summary 'List all events'
+  end
   def index
     @lo_events = LoEvent.all
   end
@@ -12,6 +15,9 @@ class LoEventsController < ApplicationController
   end
 
   # GET /lo_events/new
+  swagger_api :new do
+    summary 'Create new event'
+  end
   def new
     @lo_event = LoEvent.new
   end
@@ -21,6 +27,9 @@ class LoEventsController < ApplicationController
   end
 
   # POST /lo_events or /lo_events.json
+  swagger_api :create do
+    summary 'Create new event'
+  end
   def create
     @lo_event = LoEvent.new(lo_event_params)
 
@@ -36,6 +45,9 @@ class LoEventsController < ApplicationController
   end
 
   # PATCH/PUT /lo_events/1 or /lo_events/1.json
+  swagger_api :update do
+    summary 'Edit event'
+  end
   def update
     respond_to do |format|
       if @lo_event.update(lo_event_params)
@@ -49,6 +61,9 @@ class LoEventsController < ApplicationController
   end
 
   # DELETE /lo_events/1 or /lo_events/1.json
+  swagger_api :destroy do
+    summary 'Remove event'
+  end
   def destroy
     @lo_event.destroy
     respond_to do |format|
@@ -59,6 +74,9 @@ class LoEventsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    swagger_api :new do
+    summary 'Find event'
+  end
     def set_lo_event
       @lo_event = LoEvent.find(params[:id])
     end

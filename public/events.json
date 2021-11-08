@@ -28,6 +28,16 @@
       "path": "/events/{id}",
       "operations": [
         {
+          "summary": "Edit event",
+          "nickname": "Events#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/events/{id}",
+      "operations": [
+        {
           "summary": "Remove event",
           "nickname": "Events#destroy",
           "method": "delete"

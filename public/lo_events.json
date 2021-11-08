@@ -4,7 +4,59 @@
   "basePath": "http://localhost:3000",
   "resourcePath": "lo_events",
   "apis": [
-
+    {
+      "path": "/lo_events",
+      "operations": [
+        {
+          "summary": "List all events",
+          "nickname": "LoEvents#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/lo_events",
+      "operations": [
+        {
+          "summary": "Create new event",
+          "nickname": "LoEvents#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/lo_events/new",
+      "operations": [
+        {
+          "summary": [
+            "Create new event",
+            "Find event"
+          ],
+          "nickname": "LoEvents#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/lo_events/{id}",
+      "operations": [
+        {
+          "summary": "Edit event",
+          "nickname": "LoEvents#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/lo_events/{id}",
+      "operations": [
+        {
+          "summary": "Remove event",
+          "nickname": "LoEvents#destroy",
+          "method": "delete"
+        }
+      ]
+    }
   ],
   "authorizations": null
 }

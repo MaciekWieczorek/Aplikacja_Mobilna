@@ -45,6 +45,9 @@ class EventsController < ApplicationController
   end
 
   # PATCH/PUT /events/1 or /events/1.json
+  swagger_api :update do
+    summary 'Edit event'
+  end
   def update
     respond_to do |format|
       if @event.update(event_params)
@@ -71,6 +74,9 @@ class EventsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    swagger_api :set_event do
+    summary 'Find Your event'
+  end
     def set_event
       @event = Event.find(params[:id])
     end
