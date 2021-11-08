@@ -1,5 +1,6 @@
 class TemplatesController < ApplicationController
   before_action :set_template, only: %i[ show edit update destroy ]
+  swagger_controller :templates, "Templates"
 
   # GET /templates or /templates.json
   def index

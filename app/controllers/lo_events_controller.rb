@@ -1,5 +1,6 @@
 class LoEventsController < ApplicationController
   before_action :set_lo_event, only: %i[ show edit update destroy ]
+  swagger_controller :lo_events, "List of events"
 
   # GET /lo_events or /lo_events.json
   def index

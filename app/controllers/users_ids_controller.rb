@@ -1,5 +1,6 @@
 class UsersIdsController < ApplicationController
   before_action :set_users_id, only: %i[ show edit update destroy ]
+  swagger_controller :users_ids, "User ID"
 
   # GET /users_ids or /users_ids.json
   def index

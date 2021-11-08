@@ -1,5 +1,6 @@
 class LoTemplatesController < ApplicationController
   before_action :set_lo_template, only: %i[ show edit update destroy ]
+  swagger_controller :lo_templates, "List of templates"
 
   # GET /lo_templates or /lo_templates.json
   def index

@@ -1,7 +1,11 @@
 class EventsController < ApplicationController
   before_action :set_event, only: %i[ show edit update destroy ]
-
+  swagger_controller :events, "Events"
   # GET /events or /events.json
+  
+  swagger_api :index do
+    summary 'Returns all events'
+  end
   def index
     @events = Event.all
   end
@@ -11,6 +15,9 @@ class EventsController < ApplicationController
   end
 
   # GET /events/new
+  swagger_api :new do
+    summary 'Create new event'
+  end
   def new
     @event = Event.new
   end
@@ -20,6 +27,9 @@ class EventsController < ApplicationController
   end
 
   # POST /events or /events.json
+  swagger_api :crate do
+    summary 'Create new event'
+  end
   def create
     @event = Event.new(event_params)
 
@@ -48,6 +58,9 @@ class EventsController < ApplicationController
   end
 
   # DELETE /events/1 or /events/1.json
+  swagger_api :destroy do
+    summary 'Remove event'
+  end
   def destroy
     @event.destroy
     respond_to do |format|
