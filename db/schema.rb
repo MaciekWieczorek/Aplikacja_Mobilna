@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_07_202732) do
+ActiveRecord::Schema.define(version: 2021_11_08_171501) do
+
+  create_table "events", force: :cascade do |t|
+    t.string "No_Template"
+    t.string "Place"
+    t.string "Date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "lo_events", force: :cascade do |t|
+    t.string "Ongoing_events"
+    t.string "Event"
+    t.boolean "on_off"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

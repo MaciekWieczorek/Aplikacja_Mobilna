@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>No template:</strong>
+  <%= @event.No_Template %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @event.Place %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @event.Date %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

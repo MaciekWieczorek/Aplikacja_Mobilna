@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lo Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ongoing events</th>
+      <th>Event</th>
+      <th>On off</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lo_events.each do |lo_event| %>
+      <tr>
+        <td><%= lo_event.Ongoing_events %></td>
+        <td><%= lo_event.Event %></td>
+        <td><%= lo_event.on_off %></td>
+        <td><%= link_to 'Show', lo_event %></td>
+        <td><%= link_to 'Edit', edit_lo_event_path(lo_event) %></td>
+        <td><%= link_to 'Destroy', lo_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lo Event', new_lo_event_path %>

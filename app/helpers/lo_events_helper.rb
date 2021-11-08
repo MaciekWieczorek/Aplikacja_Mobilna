@@ -1,0 +1,2 @@
+module LoEventsHelper
+end

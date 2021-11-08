@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ongoing events:</strong>
+  <%= @lo_event.Ongoing_events %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @lo_event.Event %>
+</p>
+
+<p>
+  <strong>On off:</strong>
+  <%= @lo_event.on_off %>
+</p>
+
+<%= link_to 'Edit', edit_lo_event_path(@lo_event) %> |
+<%= link_to 'Back', lo_events_path %>

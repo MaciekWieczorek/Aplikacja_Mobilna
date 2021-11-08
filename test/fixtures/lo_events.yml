@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Ongoing_events: MyString
+  Event: MyString
+  on_off: false
+
+two:
+  Ongoing_events: MyString
+  Event: MyString
+  on_off: false

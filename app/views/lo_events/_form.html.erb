@@ -1,0 +1,32 @@
+<%= form_with(model: lo_event) do |form| %>
+  <% if lo_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lo_event.errors.count, "error") %> prohibited this lo_event from being saved:</h2>
+
+      <ul>
+        <% lo_event.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Ongoing_events %>
+    <%= form.text_field :Ongoing_events %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Event %>
+    <%= form.text_field :Event %>
+  </div>
+
+  <div class="field">
+    <%= form.label :on_off %>
+    <%= form.check_box :on_off %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

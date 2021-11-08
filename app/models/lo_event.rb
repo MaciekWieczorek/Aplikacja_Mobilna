@@ -1,0 +1,2 @@
+class LoEvent < ApplicationRecord
+end
