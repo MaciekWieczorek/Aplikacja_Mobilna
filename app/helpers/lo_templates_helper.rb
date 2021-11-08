@@ -1,0 +1,2 @@
+module LoTemplatesHelper
+end

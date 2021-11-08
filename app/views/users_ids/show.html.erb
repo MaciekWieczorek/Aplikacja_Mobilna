@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Index:</strong>
+  <%= @users_id.index %>
+</p>
+
+<p>
+  <strong>List of templates:</strong>
+  <%= @users_id.list_of_templates %>
+</p>
+
+<p>
+  <strong>Ongoing event:</strong>
+  <%= @users_id.ongoing_event %>
+</p>
+
+<%= link_to 'Edit', edit_users_id_path(@users_id) %> |
+<%= link_to 'Back', users_ids_path %>

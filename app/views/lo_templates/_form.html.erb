@@ -1,0 +1,27 @@
+<%= form_with(model: lo_template) do |form| %>
+  <% if lo_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lo_template.errors.count, "error") %> prohibited this lo_template from being saved:</h2>
+
+      <ul>
+        <% lo_template.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_of_template %>
+    <%= form.text_field :name_of_template %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_templates %>
+    <%= form.number_field :number_of_templates %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

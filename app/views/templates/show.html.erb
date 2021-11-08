@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name of template:</strong>
+  <%= @template.name_of_template %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @template.product %>
+</p>
+
+<p>
+  <strong>Number of product:</strong>
+  <%= @template.number_of_product %>
+</p>
+
+<p>
+  <strong>Checkbox:</strong>
+  <%= @template.checkbox %>
+</p>
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>

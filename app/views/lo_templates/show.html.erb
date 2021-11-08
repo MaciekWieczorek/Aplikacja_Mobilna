@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name of template:</strong>
+  <%= @lo_template.name_of_template %>
+</p>
+
+<p>
+  <strong>Number of templates:</strong>
+  <%= @lo_template.number_of_templates %>
+</p>
+
+<%= link_to 'Edit', edit_lo_template_path(@lo_template) %> |
+<%= link_to 'Back', lo_templates_path %>

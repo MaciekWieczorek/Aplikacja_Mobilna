@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Users Ids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>List of templates</th>
+      <th>Ongoing event</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users_ids.each do |users_id| %>
+      <tr>
+        <td><%= users_id.index %></td>
+        <td><%= users_id.list_of_templates %></td>
+        <td><%= users_id.ongoing_event %></td>
+        <td><%= link_to 'Show', users_id %></td>
+        <td><%= link_to 'Edit', edit_users_id_path(users_id) %></td>
+        <td><%= link_to 'Destroy', users_id, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Users', new_users_id_path %>

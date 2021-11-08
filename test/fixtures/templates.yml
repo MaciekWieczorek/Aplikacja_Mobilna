@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_of_template: MyString
+  product: MyString
+  number_of_product: 1
+  checkbox: false
+
+two:
+  name_of_template: MyString
+  product: MyString
+  number_of_product: 1
+  checkbox: false

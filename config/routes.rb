@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :lo_templates
+  resources :templates
+  resources :users_ids
   resources :events
   resources :lo_events
   resources :users
