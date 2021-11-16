@@ -1,8 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
   swagger_controller :users, "Users"
-
   # GET /users or /users.json
+  
+  swagger_api :index do
+	summary 'List all users'
+  end
   def index
     @users = User.all
   end
@@ -12,6 +15,9 @@ class UsersController < ApplicationController
   end
 
   # GET /users/new
+  swagger_api :new do
+	summary 'Create new user'
+  end
   def new
     @user = User.new
   end
@@ -21,6 +27,9 @@ class UsersController < ApplicationController
   end
 
   # POST /users or /users.json
+  swagger_api :create do
+	summary 'Create new user'
+  end
   def create
     @user = User.new(user_params)
 
@@ -36,6 +45,9 @@ class UsersController < ApplicationController
   end
 
   # PATCH/PUT /users/1 or /users/1.json
+  swagger_api :update do
+	summary 'Edit user'
+  end
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -49,6 +61,9 @@ class UsersController < ApplicationController
   end
 
   # DELETE /users/1 or /users/1.json
+  swagger_api :destroy do
+	summary 'Remove user'
+  end
   def destroy
     @user.destroy
     respond_to do |format|
@@ -59,6 +74,9 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+	swagger_api :set_user do
+	summary 'Find user'
+	end
     def set_user
       @user = User.find(params[:id])
     end
