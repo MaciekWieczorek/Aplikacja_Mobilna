@@ -1,7 +1,9 @@
 class LoTemplatesController < ApplicationController
   before_action :set_lo_template, only: %i[ show edit update destroy ]
   swagger_controller :lo_templates, "List of templates"
-
+swagger_api :idex do
+  summary 'Returns all list of templates'
+end
   # GET /lo_templates or /lo_templates.json
   def index
     @lo_templates = LoTemplate.all
@@ -12,6 +14,9 @@ class LoTemplatesController < ApplicationController
   end
 
   # GET /lo_templates/new
+  swagger_api new do
+    summary 'create new template'
+  end
   def new
     @lo_template = LoTemplate.new
   end
@@ -21,6 +26,9 @@ class LoTemplatesController < ApplicationController
   end
 
   # POST /lo_templates or /lo_templates.json
+swagger_api :create do
+  summary 'create new template'
+end
   def create
     @lo_template = LoTemplate.new(lo_template_params)
 
@@ -36,6 +44,9 @@ class LoTemplatesController < ApplicationController
   end
 
   # PATCH/PUT /lo_templates/1 or /lo_templates/1.json
+  swagger_api :update do
+    summary 'Edit template'
+  end
   def update
     respond_to do |format|
       if @lo_template.update(lo_template_params)
@@ -49,6 +60,9 @@ class LoTemplatesController < ApplicationController
   end
 
   # DELETE /lo_templates/1 or /lo_templates/1.json
+  swagger_api :destroy do
+    summary'remove template'
+  end
   def destroy
     @lo_template.destroy
     respond_to do |format|
@@ -59,6 +73,9 @@ class LoTemplatesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+     swagger_api :new do
+    summary 'Find tamplate'
+  end
     def set_lo_template
       @lo_template = LoTemplate.find(params[:id])
     end
