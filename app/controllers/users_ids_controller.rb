@@ -4,7 +4,8 @@ class UsersIdsController < ApplicationController
 
   # GET /users_ids or /users_ids.json
     swagger_api :index do
-    summary 'Returns all UsersID'
+      summary 'Returns all UsersID'
+    end
   def index
     @users_ids = UsersId.all
   end
@@ -15,7 +16,8 @@ class UsersIdsController < ApplicationController
 
   # GET /users_ids/new
     swagger_api :new do
-    summary 'Create new UsersID'
+      summary 'Create new UsersID'
+    end
   def new
     @users_id = UsersId.new
   end
@@ -26,7 +28,8 @@ class UsersIdsController < ApplicationController
 
   # POST /users_ids or /users_ids.json
     swagger_api :create do
-    summary 'Create new UsersID'
+      summary 'Create new UsersID'
+    end
   def create
     @users_id = UsersId.new(users_id_params)
 
@@ -43,7 +46,8 @@ class UsersIdsController < ApplicationController
 
   # PATCH/PUT /users_ids/1 or /users_ids/1.json
     swagger_api :update do
-    summary 'Edit UsersID'
+      summary 'Edit UsersID'
+    end
   def update
     respond_to do |format|
       if @users_id.update(users_id_params)
@@ -58,7 +62,8 @@ class UsersIdsController < ApplicationController
 
   # DELETE /users_ids/1 or /users_ids/1.json
     swagger_api :destroy do
-    summary 'Remove UsersID'
+      summary 'Remove UsersID'
+    end
   def destroy
     @users_id.destroy
     respond_to do |format|
@@ -70,7 +75,8 @@ class UsersIdsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     swagger_api :new do
-    summary 'Find UsersID'
+      summary 'Find UsersID'
+    end
     def set_users_id
       @users_id = UsersId.find(params[:id])
     end
