@@ -2,7 +2,10 @@ class TemplatesController < ApplicationController
   before_action :set_template, only: %i[ show edit update destroy ]
   swagger_controller :templates, "Templates"
 
-  # GET /templates or /templates.json
+# GET /templates or /templates.json
+swagger_api :index do
+  summary 'Returns all templates'
+end
   def index
     @templates = Template.all
   end
@@ -12,6 +15,9 @@ class TemplatesController < ApplicationController
   end
 
   # GET /templates/new
+  swagger_api :new do
+    summary 'Creates new template'
+  end
   def new
     @template = Template.new
   end
@@ -21,6 +27,9 @@ class TemplatesController < ApplicationController
   end
 
   # POST /templates or /templates.json
+  swagger_api :create do
+    summary 'Creates new template'
+  end
   def create
     @template = Template.new(template_params)
 
@@ -36,6 +45,9 @@ class TemplatesController < ApplicationController
   end
 
   # PATCH/PUT /templates/1 or /templates/1.json
+  swagger_api :update do
+    summary 'Edit template'
+  end
   def update
     respond_to do |format|
       if @template.update(template_params)
@@ -49,6 +61,9 @@ class TemplatesController < ApplicationController
   end
 
   # DELETE /templates/1 or /templates/1.json
+  swagger_api :destroy do 
+  summary 'Remove template'
+  end
   def destroy
     @template.destroy
     respond_to do |format|
@@ -59,6 +74,9 @@ class TemplatesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    swagger_api :set_template do
+      summary 'Find your template'
+    end
     def set_template
       @template = Template.find(params[:id])
     end
