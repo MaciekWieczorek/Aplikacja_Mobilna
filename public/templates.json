@@ -4,7 +4,56 @@
   "basePath": "http://localhost:3000",
   "resourcePath": "templates",
   "apis": [
-
+    {
+      "path": "/templates",
+      "operations": [
+        {
+          "summary": "Returns all templates",
+          "nickname": "Templates#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/templates",
+      "operations": [
+        {
+          "summary": "Creates new template",
+          "nickname": "Templates#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/templates/new",
+      "operations": [
+        {
+          "summary": "Creates new template",
+          "nickname": "Templates#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/templates/{id}",
+      "operations": [
+        {
+          "summary": "Edit template",
+          "nickname": "Templates#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/templates/{id}",
+      "operations": [
+        {
+          "summary": "Remove template",
+          "nickname": "Templates#destroy",
+          "method": "delete"
+        }
+      ]
+    }
   ],
   "authorizations": null
 }

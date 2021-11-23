@@ -4,7 +4,59 @@
   "basePath": "http://localhost:3000",
   "resourcePath": "users_ids",
   "apis": [
-
+    {
+      "path": "/users_ids",
+      "operations": [
+        {
+          "summary": "Returns all UsersID",
+          "nickname": "UsersIds#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/users_ids",
+      "operations": [
+        {
+          "summary": "Create new UsersID",
+          "nickname": "UsersIds#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/users_ids/new",
+      "operations": [
+        {
+          "summary": [
+            "Create new UsersID",
+            "Find UsersID"
+          ],
+          "nickname": "UsersIds#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/users_ids/{id}",
+      "operations": [
+        {
+          "summary": "Edit UsersID",
+          "nickname": "UsersIds#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/users_ids/{id}",
+      "operations": [
+        {
+          "summary": "Remove UsersID",
+          "nickname": "UsersIds#destroy",
+          "method": "delete"
+        }
+      ]
+    }
   ],
   "authorizations": null
 }

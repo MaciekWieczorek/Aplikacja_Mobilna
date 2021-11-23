@@ -4,7 +4,46 @@
   "basePath": "http://localhost:3000",
   "resourcePath": "lo_templates",
   "apis": [
-
+    {
+      "path": "/lo_templates",
+      "operations": [
+        {
+          "summary": "create new template",
+          "nickname": "LoTemplates#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/lo_templates/new",
+      "operations": [
+        {
+          "summary": "Find tamplate",
+          "nickname": "LoTemplates#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/lo_templates/{id}",
+      "operations": [
+        {
+          "summary": "Edit template",
+          "nickname": "LoTemplates#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/lo_templates/{id}",
+      "operations": [
+        {
+          "summary": "remove template",
+          "nickname": "LoTemplates#destroy",
+          "method": "delete"
+        }
+      ]
+    }
   ],
   "authorizations": null
 }

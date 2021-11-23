@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_180948) do
+ActiveRecord::Schema.define(version: 2021_11_22_151221) do
 
   create_table "events", force: :cascade do |t|
     t.string "No_Template"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_11_08_180948) do
     t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
   create_table "users_ids", force: :cascade do |t|

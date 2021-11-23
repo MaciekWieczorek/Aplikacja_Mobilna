@@ -4,7 +4,56 @@
   "basePath": "http://localhost:3000",
   "resourcePath": "users",
   "apis": [
-
+    {
+      "path": "/users",
+      "operations": [
+        {
+          "summary": "List all users",
+          "nickname": "Users#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/users",
+      "operations": [
+        {
+          "summary": "Create new user",
+          "nickname": "Users#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/users/new",
+      "operations": [
+        {
+          "summary": "Create new user",
+          "nickname": "Users#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/users/{id}",
+      "operations": [
+        {
+          "summary": "Edit user",
+          "nickname": "Users#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/users/{id}",
+      "operations": [
+        {
+          "summary": "Remove user",
+          "nickname": "Users#destroy",
+          "method": "delete"
+        }
+      ]
+    }
   ],
   "authorizations": null
 }

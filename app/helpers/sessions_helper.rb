@@ -1,5 +1,4 @@
 module SessionsHelper
-<<<<<<< HEAD
 	def log_in(user)
   		session[:user_id] = user.id
 	end
@@ -15,9 +14,5 @@ module SessionsHelper
 	def log_out
 		session.delete(:user_id)
 		@current_user = nil
-=======
-	def log_in(student)
-  		session[:student_id] = student.id
->>>>>>> ac0191d6c6c3fff9f36c34a7219cdb0f25924722
 	end
 end
