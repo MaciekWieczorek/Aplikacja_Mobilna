@@ -1,0 +1,15 @@
+<ul>
+<% for event in current_student.courses do %>
+  <li><%= course.name %></li>
+  <ul>
+  <% for template in event.topics do %>
+    <li><%= topic.title %></li>
+    <ul>
+      <% for post in template.posts %>
+        <li><%= post.body %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  </ul>
+<% end %>
+</ul>

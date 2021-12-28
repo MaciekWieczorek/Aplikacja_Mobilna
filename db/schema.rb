@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_151221) do
+ActiveRecord::Schema.define(version: 2021_12_28_170616) do
 
   create_table "events", force: :cascade do |t|
     t.string "No_Template"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 2021_11_22_151221) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
+    t.string "token"
+    t.index "\"index\"", name: "index_users_on_index", unique: true
   end
 
   create_table "users_ids", force: :cascade do |t|

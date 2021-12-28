@@ -1,11 +1,11 @@
-current directory: C:/Users/user/Desktop/Projekt/Aplikacja_Mobilna/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.16/ext/mri
-C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211122-10252-fkhg2r.rb extconf.rb
+current directory: C:/Users/Maciej/Desktop/TEST/Aplikacja_Mobilna/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.16/ext/mri
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/3.0.0 -r ./siteconf20211122-14024-ldp4jw.rb extconf.rb
 creating Makefile
 
-current directory: C:/Users/user/Desktop/Projekt/Aplikacja_Mobilna/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.16/ext/mri
+current directory: C:/Users/Maciej/Desktop/TEST/Aplikacja_Mobilna/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.16/ext/mri
 make DESTDIR\= clean
 
-current directory: C:/Users/user/Desktop/Projekt/Aplikacja_Mobilna/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.16/ext/mri
+current directory: C:/Users/Maciej/Desktop/TEST/Aplikacja_Mobilna/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.16/ext/mri
 make DESTDIR\=
 generating bcrypt_ext-x64-mingw32.def
 compiling bcrypt_ext.c
@@ -21,6 +21,6 @@ wrapper.c:189:7: warning: 'crypt' redeclared without dllimport attribute: previo
       |       ^~~~~
 linking shared-object bcrypt_ext.so
 
-current directory: C:/Users/user/Desktop/Projekt/Aplikacja_Mobilna/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.16/ext/mri
+current directory: C:/Users/Maciej/Desktop/TEST/Aplikacja_Mobilna/vendor/bundle/ruby/3.0.0/gems/bcrypt-3.1.16/ext/mri
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20211122-10252-qf2ch6
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20211122-14024-bpchcj
